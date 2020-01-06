@@ -14,7 +14,7 @@
 
 #include "IdManagerTest.h"
 
-#include "private/windows/IdManager.h"
+#include "ui/private/windows/IdManager.h"
 
 IdManagerTest::IdManagerTest()
 :idManager(NULL)
