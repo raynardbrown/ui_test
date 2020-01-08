@@ -88,7 +88,7 @@ endif()
 
 list(APPEND Headers ${UI_INCLUDE})
 
-find_path(UI_SRC_INCLUDE NAMES Window.cpp PATH_SUFFIXES ui/src)
+find_path(UI_SRC_INCLUDE NAMES ui/private/windows/IdManager.h PATH_SUFFIXES ui/src)
 
 if(NOT UI_SRC_INCLUDE)
   message(FATAL_ERROR "ui src headers not found")
