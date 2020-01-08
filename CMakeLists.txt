@@ -80,7 +80,7 @@ endif()
 
 list(APPEND Libraries ${UI_LIBRARY})
 
-find_path(UI_INCLUDE NAMES Window.h PATH_SUFFIXES ui/inc)
+find_path(UI_INCLUDE NAMES ui/Window.h PATH_SUFFIXES ui/inc)
 
 if(NOT UI_INCLUDE)
   message(FATAL_ERROR "ui headers not found")
