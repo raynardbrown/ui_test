@@ -18,6 +18,8 @@ cmake_minimum_required(VERSION 3.15.5)
 # Set the name of the project and store it in a variable PROJECT_NAME
 project(ui_test)
 
+set(GTEST_LIB_NAME "gtest")
+
 #
 # Find the source compiled, not installed googletest library. Normally if you
 # built and installed googletest you would just run find_package(GTest) within
