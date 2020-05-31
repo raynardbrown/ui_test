@@ -18,14 +18,12 @@ cmake_minimum_required(VERSION 3.15.5)
 # Set the name of the project and store it in a variable PROJECT_NAME
 project(ui_test)
 
-set(GTEST_LIB_NAME "gtest")
-
 #
 # Find the source compiled, not installed googletest library. Normally if you
 # built and installed googletest you would just run find_package(GTest) within
 # CMake. However, GTest does not work (at least I could not get it to work) with
 # a googletest library that has not been installed.
-find_library(MY_GTEST_LIBRARIES gtestd
+find_library(MY_GTEST_LIBRARIES names gtest gtestd
              HINTS
                  ENV GTEST_ROOT
                  ${GTEST_ROOT}
