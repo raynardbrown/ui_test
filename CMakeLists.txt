@@ -18,6 +18,8 @@ cmake_minimum_required(VERSION 3.15.5)
 # Set the name of the project and store it in a variable PROJECT_NAME
 project(ui_test)
 
+find_package(Threads)
+
 #
 # Find the source compiled, not installed googletest library. Normally if you
 # built and installed googletest you would just run find_package(GTest) within
@@ -98,6 +100,6 @@ list(APPEND Headers ${UI_SRC_INCLUDE})
 
 add_executable(${PROJECT_NAME} ${Sources})
 
-target_link_libraries(${PROJECT_NAME} ${Libraries})
+target_link_libraries(${PROJECT_NAME} ${Libraries} ${CMAKE_THREAD_LIBS_INIT})
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${Headers})
