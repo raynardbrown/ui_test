@@ -70,8 +70,7 @@ if (MSVC)
                         -DUNICODE
                         -D_UNICODE)
 else()
-    # fail until we target more platforms
-    message(FATAL_ERROR "compiler not supported")
+    add_compile_options(-Wall -Wextra -pedantic -std=c++11)
 endif()
 
 find_library(UI_LIBRARY ui PATH_SUFFIXES ui/build)
